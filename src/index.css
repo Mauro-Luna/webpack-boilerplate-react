@@ -1,0 +1,6 @@
+* {
+  transition: all .3s;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+  user-select: none;
+}
