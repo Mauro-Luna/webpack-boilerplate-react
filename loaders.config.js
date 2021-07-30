@@ -29,7 +29,6 @@ const CSSLoader = {
       loader: CSSExtractPlugin.loader,
       options: {
         publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}/`,
-        hmr: true,
       },
     },
     'css-loader',
@@ -68,7 +67,6 @@ const PRODCSSLoader = {
       loader: CSSExtractPlugin.loader,
       options: {
         publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}/`,
-        hmr: false,
       },
     },
     {

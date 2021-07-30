@@ -20,8 +20,8 @@ module.exports = {
   },
   plugins: [
     new CSSExtractPlugin({
-      filename: '[name].bundle.css',
-      chunkFilename: '[name].[id].css',
+      filename: '[name].chunk.css',
+      chunkFilename: '[name].chunk.css',
       ignoreOrder: false,
     }),
     new HTMLWebpackPlugin({
