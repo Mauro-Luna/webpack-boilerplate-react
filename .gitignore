@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 #folders
 node_modules
+=======
+/node_modules
+/dist
+package-lock.json
+>>>>>>> 45bc5a91866c3a8833202a9891fb344a0c91b43d
