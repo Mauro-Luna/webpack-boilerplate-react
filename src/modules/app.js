@@ -1,9 +1,9 @@
 import React from 'react';
-import '../index.css';
+import styles from '../index.css';
 
 function App() {
   return (
-    <div>
+    <div className={styles.app}>
       <h1>Webpack boilerplate--react</h1>
       <ul>
         <li>fonts support: woff, woff2, ttf, otf, eot</li>
