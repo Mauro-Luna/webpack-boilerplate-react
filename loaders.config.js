@@ -31,7 +31,13 @@ const CSSLoader = {
         publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}/`,
       },
     },
-    'css-loader',
+    {
+      loader: 'css-loader',
+      options: {
+        importLoaders: 1,
+        modules: true,
+      },
+    },
     'postcss-loader',
   ],
 };
@@ -60,30 +66,10 @@ const FONTSLoader = {
   ],
 };
 
-const PRODCSSLoader = {
-  test: /\.css$/,
-  use: [
-    {
-      loader: CSSExtractPlugin.loader,
-      options: {
-        publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}/`,
-      },
-    },
-    {
-      loader: 'css-loader',
-      options: {
-        importLoaders: 1,
-      },
-    },
-    'postcss-loader',
-  ],
-};
-
 module.exports = {
   HTMLLoader,
   JSXLoader,
   CSSLoader,
   MEDIALoader,
   FONTSLoader,
-  PRODCSSLoader,
 };
