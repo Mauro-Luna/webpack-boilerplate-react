@@ -12,12 +12,13 @@ module.exports = {
   module: {
     rules: [
       loaders.JSXLoader,
-      loaders.PRODCSSLoader,
+      loaders.CSSLoader,
       loaders.HTMLLoader,
       loaders.MEDIALoader,
       loaders.FONTSLoader,
     ],
   },
+  mode: 'production',
   plugins: [
     new CSSExtractPlugin({
       filename: '[name].chunk.css',
