@@ -8,10 +8,9 @@
     "build": "webpack --config ./webpack.prod.js",
     "start": "webpack-dev-server --open --config ./webpack.dev.js",
     "lint": "eslint --ext .jsx,.js src",
-    "pre-commit": "yarn run lint",
-    "pre-push": "yarn test",
-    "post-merge": "yarn install", 
-    "post-rewrite": "yarn install"
+    "pre-commit": "npm lint",
+    "post-rewrite": "npm install",
+    "prepare": "husky install"
   },
   "author": "Mauro Luna",
   "license": "MIT",
@@ -38,6 +37,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^8.0.1",
     "mini-css-extract-plugin": "^2.0.0",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
